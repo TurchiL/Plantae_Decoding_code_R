@@ -127,3 +127,26 @@ fviz_pca_biplot(pca,
                 col.var = "black", repel = TRUE,
                 legend.title = "Species") 
 ggsave("your_input_directory/PCA_plot.png",dpi=300,bg="white")
+
+
+### Additional examples
+## Read different file formats
+read.csv("Path_to_your_file", sep=",", header=T)
+# If the file doesn't have a header then add header=FALSE or F 
+
+#Reading a tsv file
+read.csv("Path_to_your_file", sep=" ", header=T)
+
+#Reading a table and creating a data frame 
+read.table("Path_to_your_file", sep=" ", header=T)
+read.delim("Path_to_your_file", sep=" ", header=T)
+
+#Reading an excel, xlsx,xls file
+library(readxl)
+read_excel("Path_to_your_file")
+read_xlsx("Path_to_your_file")
+read_xls("Path_to_your_file")
+
+## Write output file
+write.csv(dataframe, "Path_to_your_output_file.csv") #export as csv
+write.table(dataframe, "Path_to_your_output_file") #export as a table with an extension of choice
