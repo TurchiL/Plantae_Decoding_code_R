@@ -118,7 +118,7 @@ library(FactoMineR)
 library(factoextra)
 
 # Run PCA
-pca <- PCA(data, graph = FALSE)
+pca <- PCA(df[1:4], graph = FALSE)
 
 # Visualize PCA results
 fviz_pca_biplot(pca, 
